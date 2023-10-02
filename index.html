@@ -6,105 +6,153 @@
     <title>BlackBird</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel='icon' href='favicon.ico' type='image/x-icon' >
 
 </head>
 <body style="background-color: #F2EAD3;">
-    <div class="container-fluid">
-        <div class="row no-gutters" style="background-color:#DFD7BF; height:100px">
-            <div class="col-10">
-               <img src="232231-200.png" alt="" style="height:100px;width:100px; color:#A2678A">
-                <span class="h1" style="color:#3F2305">BlackBird</span>
-            </div>
-            <div class="col-2 col-xs-1"><span id="text"><i class="fa fa-user" aria-hidden="true"></i>
-                Личный кабинет</span></div>
-        </div>
-    </div>
-    <div style="margin-top:100px">
+  <nav class="navbar navbar-expand-lg navbar-light bg-color" style="background-color: #DFD7BF;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="232231-200.png" alt="" style="height: 100px; width: 100px; color: #A2678A">
+      <span class="h1" style="color: #3F2305">BlackBird</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-lg nav-link" href="index.html">Магазин</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-lg nav-link" href="about.html">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn nav-link btn-lg" href="cab.html">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            Личный кабинет
+          </a>
+        </li>
         
+      </ul>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-xs-5">
-                <div class="list-group">
-                    <a class="list-group-item" href="#"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Гитары</a>
-                    <a class="list-group-item" href="#"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Бас-гитары</a>
-                    <a class="list-group-item" href="#"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Классические гитары</a>
-                    <a class="list-group-item" href="#"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Барабаны</a>
-                  </div>
+  </div>
+</nav>
+<div class="container mt-3">
+    <div class="row p-1">
+        <div class="col-md-2 col-sm-4 col-xs-5">
+            <div class="list-group">
+                <a class="list-group-item" data-toggle="tab" href="#guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Гитары</a>
+                <a class="list-group-item" data-toggle="tab" href="#bass-guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Бас-гитары</a>
+                <a class="list-group-item" data-toggle="tab" href="#classical-guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Классические гитары</a>
+                <a class="list-group-item" data-toggle="tab" href="#drums"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Барабаны</a>
             </div>
+        </div>
+
+
 
     <div class="col-md col-xs-12" style="background-color: #F5F5F5;">
-        <div class="row justify-content-center no-gutters" style="margin-top:20px">
+        <div class="row justify-content-center no-gutters" style="margin-top:14px">
             <div class="col-md-3 col-xs-12">
-                <img class="rounded" src="2sedbqdvhc0ejuokti8km3pii0qv97pt.jpeg" alt="">
+                <img class="rounded" src="yx8h0vg2jxejc44uvf92hcvu50ev6g1b.jpeg" alt="">
                 <div class="col-sm" id="text">
-                    Электрогитара Rockdale Stars Black Limited Edition SSH BK
+                    Электрогитара Rockdale
+                     Stars Black Limited Edition SSH BK<br>
                     <a class="btn btn-lg"  href="pay.html" style="color: #3F2305;">
                         <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                     <a class="btn btn-lg ">
+                     <i id="starIcon" class="far fa-star" style="color: gold;" ></i>
+                    </a>
                 </div>
             </div>
         
-            <div class="col-md-3 col-xs-12">
+            <div class="col-md-3 col-xs-12 ml-2">
                 <img class="rounded"src="jux60z60whb1tmxmukpvu5jddrvb3lwr.jpeg" alt="">
                 <div class="col-sm" id="text">
                     Электрогитара Rockdale Stars HT HSS Black <br>
                     <a class="btn btn-lg"  href="pay.html" style="color: #3F2305;">
                         <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                        <a class="btn btn-lg ">
+                            <i id="starIcon" class="far fa-star" style="color: gold;"></i>
+                           </a>
                 </div>
             </div>
             <div class="col-md-3 col-xs-12">
                 <img class="rounded" src="fd74f8db353a361f3401feb076fe1302.jpeg" alt="">
-                <div id="text" class="col-sm">Электрогитара с кейсом Yamaha AES1500 PSW
+                <div id="text" class="col-sm">Электрогитара с кейсом Yamaha AES1500 PSW<br>
                 </div>
                 <a class="btn btn-lg"  href="pay.html" style="color: #3F2305;">
                     <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                    <a class="btn btn-lg ">
+                        <i id="starIcon" class="far fa-star" style="color: gold;" ></i>
+                       </a>
             </div>
             <div class="col-md-3 col-xs-12">
                 <img class="rounded" src="f2f98bd9ae3463ef88e506c95315a41e.jpeg" alt="">
                 <div id="text" class="col-sm">
-                    Электрогитара Yamaha RGX121Z RM
+                    Электрогитара Yamaha RGX121Z RM<br>
                 </div>
                 <a class="btn btn-lg"  href="pay.html" style="color: #3F2305;">
                     <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                    <a class="btn btn-lg ">
+                        <i id="starIcon" class="far fa-star" style="color: gold;" ></i>
+                       </a>
             </div>
         </div>
         <div class="row justify-content-center" style="margin-top:20px;">
             <div class="col-md-3 col-xs-12">
                 <img class="rounded" src="a071bc905bc0237855444573bcd82502.jpeg" alt="">
                 <div id="text" class="col-sm">
-                    Электрогитара Rockdale Stars HT HSS Black
-                    <br>
+                    Электрогитара Rockdale Stars HT HSS Classic<br>
                     <a class="btn btn-lg"  href="pay.html" style="color: #3F2305;">
                         <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                        <a class="btn btn-lg ">
+                            <i id="starIcon" class="far fa-star" style="color: gold;" ></i>
+                           </a>
                 </div>
             </div>
             <div class="col-md-3 col-xs-12">
                 <img class="rounded" src="ddc7656be69417ca2b8997aedf8a7a36.jpeg" alt="">
                 <div id="text" class="col-sm">
-                    Гитара Yamaha SLG200N
+                    Гитара Yamaha SLG200N   <br>
                     <a class="btn btn-lg"  href="pay.html" style="color: #3F2305;">
-                        <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                        <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a><a class="btn btn-lg ">
+                            <i id="starIcon" class="far fa-star" style="color: gold;" ></i>
+                           </a>
                 </div>
             </div>
             <div class="col-md-3 col-xs-12">
                 <img class="rounded" src="1754a4c052f4cc0842be06d934afaa42.jpeg" alt="">
                 <div id="text" class="col-sm">
-                    Электрогитара Yamaha RGX420DZII SBL
+                    Электрогитара Yamaha RGX420DZII SBL<br>
                     <a class="btn btn-lg"  href="pay.html" style="color: #3F2305;">
                         <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                        <a class="btn btn-lg ">
+                            <i id="starIcon" class="far fa-star" style="color: gold;" ></i>
+                           </a>
                 </div>
             </div>
             <div class="col-md-3 col-xs-12">
                 <img class="rounded" src="1398d54b93f4d856e7901f5865715ed0.jpeg" alt="">
-                <div id="text" class="col-sm">Электрогитара Gibson FLYING V PRO 2016 T WINE RED
+                <div id="text" class="col-sm">Электрогитара Gibson FLYING V PRO 2016 T WINE RED<br>
                     <a class="btn btn-lg"  href="pay.html   " style="color: #3F2305;">
                         <i class="fa fa-angle-down" aria-hidden="true"> Check</i></a>
+                        <a class="btn btn-lg ">
+                            <i id="starIcon" class="far fa-star" style="color: gold;" ></i>
+                           </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 </div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
