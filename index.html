@@ -13,7 +13,7 @@
 <body style="background-color: #F2EAD3;">
   <nav class="navbar navbar-expand-lg navbar-light bg-color" style="background-color: #DFD7BF;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.html">
       <img src="232231-200.png" alt="" style="height: 100px; width: 100px; color: #A2678A">
       <span class="h1" style="color: #3F2305">BlackBird</span>
     </a>
@@ -40,23 +40,27 @@
     </div>
   </div>
 </nav>
+
+
 <div class="container mt-3">
     <div class="row p-1">
         <div class="col-md-2 col-sm-4 col-xs-5">
-            <div class="list-group">
-                <a class="list-group-item" data-toggle="tab" href="#guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Гитары</a>
-                <a class="list-group-item" data-toggle="tab" href="#bass-guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Бас-гитары</a>
-                <a class="list-group-item" data-toggle="tab" href="#classical-guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Классические гитары</a>
-                <a class="list-group-item" data-toggle="tab" href="#drums"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Барабаны</a>
+            <div class="list-group" id="myTabs">
+                <a class="list-group-item active" href="#guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Гитары</a>
+                <a class="list-group-item" href="#bass-guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Бас-гитары</a>
+                <a class="list-group-item" href="#classical-guitars"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Классические гитары</a>
+                <a class="list-group-item" href="#drums"><i class="fa fa-music" aria-hidden="true"></i>&nbsp; Барабаны</a>
             </div>
         </div>
 
-
-
-    <div class="col-md col-xs-12" style="background-color: #F5F5F5;">
-        <div class="row justify-content-center no-gutters" style="margin-top:14px">
-            <div class="col-md-3 col-xs-12">
-                <img class="rounded" src="yx8h0vg2jxejc44uvf92hcvu50ev6g1b.jpeg" alt="">
+        <div class="col-md col-xs-12" style="background-color: #F5F5F5;">
+            <div class="tab-content">
+                <div id="guitars" class="tab-pane fade show active" role="tabpanel">
+                    <h3>Гитары</h3>
+                    <div class="col-md col-xs-12" style="background-color: #F5F5F5;">
+                        <div class="row justify-content-center no-gutters" style="margin-top:14px">
+                            <div class="col-md-3 col-xs-12">
+                                <img class="rounded" src="yx8h0vg2jxejc44uvf92hcvu50ev6g1b.jpeg" alt="">
                 <div class="col-sm" id="text">
                     Электрогитара Rockdale
                      Stars Black Limited Edition SSH BK<br>
@@ -66,9 +70,9 @@
                      <i id="starIcon" class="far fa-star" style="color: gold;" >0</i>
                     </a>
                 </div>
-            </div>
+                            </div>
         
-            <div class="col-md-3 col-xs-12 ml-2">
+                <div class="col-md-3 col-xs-12 ml-2">
                 <img class="rounded"src="jux60z60whb1tmxmukpvu5jddrvb3lwr.jpeg" alt="">
                 <div class="col-sm" id="text">
                     Электрогитара Rockdale Stars HT HSS Black <br>
@@ -147,14 +151,35 @@
         </div>
     </div>
 </div>
+                <div id="bass-guitars" class="tab-pane fade" role="tabpanel">
+                    <h3>Бас-гитары</h3>
+                    <!-- Добавьте контент для раздела "Бас-гитары" -->
+                </div>
+                <div id="classical-guitars" class="tab-pane fade" role="tabpanel">
+                    <h3>Классические гитары</h3>
+                    <!-- Добавьте контент для раздела "Классические гитары" -->
+                </div>
+                <div id="drums" class="tab-pane fade" role="tabpanel">
+                    <h3>Барабаны</h3>
+                    <!-- Добавьте контент для раздела "Барабаны" -->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+        
 <script src="secondtask.js"></script>
-
 <script src="liker.js"></script>
-
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#myTabs a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    });
+</script>
 </body>
 </html>
