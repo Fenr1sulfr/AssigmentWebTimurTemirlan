@@ -11,15 +11,20 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md">
-                <button onclick="increment()"></button>
-                <p>score:</p>
-                <p id="score"></p>
+                <form>
+                    <input type="text" required pattern="[A-Za-z]+" oninvalid="this.setCustomValidity('Please enter only letters')" oninput="this.setCustomValidity('')">
+                    <input type="submit" value="Submit">
+                </form>
             </div>
             <div class="col-xs-12">
                 
             </div>
         </div>
     </div>
-    <script src="test.js"></script>
+    <script>
+        function test(){
+            window.location.assign("index.html")
+        }
+    </script>
 </body>
 </html>

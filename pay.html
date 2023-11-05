@@ -29,7 +29,7 @@
           <a class="btn btn-lg nav-link" href="about.html">About us</a>
         </li>
         <li class="nav-item">
-          <a class="btn nav-link btn-lg" href="cab.html">
+          <a class="btn nav-link btn-lg" href="enter.html">
             <i class="fa fa-user" aria-hidden="true"></i>
             Личный кабинет
           </a>
@@ -45,23 +45,24 @@
             <div class="col-4 col-xs-12">
         <div class="input-group margin-bottom-sm">
             <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
-            <input id="persName"class="form-control" type="text" placeholder="Name">
+            <input id="persName"class="form-control" type="text" placeholder="Name" oninput="validateName(this.value)">
           </div>
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
-            <input id='onlynumbers'class="form-control" type="password" placeholder="UIN">
+            <input id='onlynumbers'class="form-control" type="password" placeholder="UIN"oninput='validateUIN()'>
           </div>
           <div class="col-md-3 col-xs-12">
             <div class="input-group margin-bottom-sm">
                 <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i>
                 </span>
-                <input class="form-control" type="text" placeholder="CVV">
+                <input id='cvv' class="form-control" type="text" oninput="checkcvv()" placeholder="CVV">
               </div> 
         </div>
         <div class="col-md col-xs-12">
-            <a class="btn btn-lg ">
+          <a class="btn btn-lg" onclick="submitForm()">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            Buy</a>
+            Buy
+        </a>
         </div>
             </div>
     
@@ -78,7 +79,6 @@
               </div>
           </div>
     </div>
-    <script src="secondtask2.js"></script>
     <script src="confirm.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

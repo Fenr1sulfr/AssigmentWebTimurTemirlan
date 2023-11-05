@@ -1,6 +1,8 @@
 const inputname = document.getElementsByName('CName')[0];
 const inputnfam = document.getElementsByName('CSurname')[0];
 const images = document.getElementsByClassName('img-slider');
+
+
 function showImage(n) {
     if (n >= images.length) {
       index = 0;
