@@ -1,7 +1,7 @@
 const submit = document;
 const storage = localStorage;
 
-submit.getElementById('submitin').addEventListener('click', function(event) {
+submit.getElementById('submitup').addEventListener('click', function(event) {
     event.preventDefault(); // Предотвращаем отправку формы по умолчанию
 
     const id = 'user' + Date.now();
@@ -36,38 +36,5 @@ function check(mail) {
         }
     }
     return true;
-}
-
-
-submit.getElementById('signin').addEventListener('click', function(event) {
-  event.preventDefault(); // Предотвращаем отправку формы по умолчанию
-
-  var email = submit.getElementById('email').value;
-  var password = submit.getElementById('password').value;
-
- if(!check()){
-  
-    for (let i = 0; i < localStorage.length; i++) {
-      let key = localStorage.key(i);
-      let value = localStorage.getItem(key);
-      let obj = JSON.parse(value)
-      if(obj.password===password){
-        var url = 'cab.html?' + new URLSearchParams(data);
-        window.location.href = url;
-      }
-      if(obj.email==='moldakhmetov00@bk.ru' && obj.password===password){
-        window.location.assign = 'admin.html'
-      } 
-  }
- }
-});
-
-function validateEmail(email) {
-  
-}
-
-function checkCredentials(email, password) {
-  // Проверка соответствия введенного email и пароля с существующими данными
-  // Вернуть true, если вход успешен, в противном случае вернуть false
 }
 

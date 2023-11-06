@@ -11,4 +11,8 @@ const doc = document
 document.getElementById("name").setAttribute('value',name1)
 document.getElementById("surname").setAttribute('value',surname1)
 document.getElementById("email").setAttribute('value',email1)
+
+if(email1==='moldakhmetov00@bk.ru'){
+    window.location.href='admin.html'
+}
 // Делаем что-то с полученными значениями
