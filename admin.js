@@ -117,3 +117,7 @@ function addUser() {
             var formContainer = document.querySelector('.container');
             formContainer.classList.add('hidden');
         }
+
+        function adminValidation() {
+            
+          }

@@ -64,9 +64,7 @@
   <source src="Electric_Guitar_Dolly_Shot_3.mov" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
-
-<div id="signup-form ">
-  <div id="signup-form" >
+  <div id="signup-form">
     <h2 id="form-title">Sign Up</h2>
     <form id="signup">
       
@@ -83,23 +81,23 @@
   <label for="password">Password:</label><br>
   <input type="password" id="password" name="password" onblur="checkpswd(this.value)" required><br><br>
   <button type="button" id="swap-btn" onclick="swapForm()">Sign In</button>
-  <input type="submit" id="submitin" value="Submit">
+  <input type="submit" id="submitup" value="Submit">
   
     </form>
     <form id="signin" style="display: none;">
       <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <input type="email" id="emailin" name="email" required><br><br>
       
       <label for="password">Password:</label><br>
-      <input type="password" id="password" name="password" onblur="checkpswd(this.value)" required><br><br>
+      <input type="password" id="passwordin" name="password" onblur="checkpswd(this.value)" required><br><br>
       
-      <input type="submit" id="submitin" value="Submit">
+      <input type="submit" id="signinf" value="Submit">
       <button type="button" id="swap-btn" onclick="swapForm()">Sign Up</button>
   </form>
   
 </div>
 <script> 
-function swapForm() {
+  function swapForm() {
   const signUpForm = document.getElementById('signup');
   const signInForm = document.getElementById('signin');
   const formTitle = document.getElementById('form-title');
@@ -116,8 +114,8 @@ function swapForm() {
       formTitle.innerText = 'Sign Up';
       swapBtn.innerText = 'Sign In';
   }
-}
-</script>
+}</script>
+<script src="signin.js"></script>
         <script src="confirm.js"></script>
         <script src="signupin.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
