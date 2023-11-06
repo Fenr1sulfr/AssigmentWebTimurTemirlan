@@ -1,22 +1,51 @@
-let index = 0;
-const images = document.getElementsByClassName('img-slider');
 
-function showImage(n) {
-  if (n >= images.length) {
-    index = 0;
-  } else if (n < 0) {
-    index = images.length - 1;
-  } else {
-    index = n;
-  }
-  for (let i = 0; i < images.length; i++) {
-    images[i].style.display = 'none';
-  }
-  images[index].style.display = 'block';
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const prevInvisibleButton = document.getElementById('prev-invisible');
+const nextInvisibleButton = document.getElementById('next-invisible');
+
+let currentIndex = 0;
+let autoSlideInterval;
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 33.33}%)`;
 }
 
-showImage(0);
+function nextSlide() {
+    currentIndex++;
+    if (currentIndex >= slides.length - 2) {
+        currentIndex = 0;
+    }
+    updateSlider();
+}
 
-setInterval(() => {
-  showImage(index + 1);
-}, 2000); // Change image every 2 seconds
+function prevSlide() {
+  currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 3;
+    }
+    updateSlider();
+}
+prevButton.addEventListener('click', () => {
+    prevSlide();
+});
+
+nextButton.addEventListener('click', () => {
+    nextSlide();
+});
+
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3000); // Change slides every 3 seconds
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+startAutoSlide();
+
+slider.addEventListener('mouseenter', stopAutoSlide);
+slider.addEventListener('mouseleave', startAutoSlide);
