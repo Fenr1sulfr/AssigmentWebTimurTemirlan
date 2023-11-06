@@ -15,4 +15,4 @@ document.getElementById("email").setAttribute('value',email1)
 if(email1==='moldakhmetov00@bk.ru'){
     window.location.href='admin.html'
 }
-// Делаем что-то с полученными значениями
+// Делаем что-то с полученными значениямv
