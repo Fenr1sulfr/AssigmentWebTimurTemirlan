@@ -1,1 +1,0 @@
-alert("Hello there! This is our magazine of guitars!")
