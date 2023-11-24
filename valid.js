@@ -102,7 +102,7 @@ submit.getElementById('submitup').addEventListener('click', function(event) {
     };
 
     if (!check(data.email)) {
-        return alert("This account already exists");
+        document.getElementById('emailError').textContent = 'Email already exists';
     }
 
     var jsonData = JSON.stringify(data);
