@@ -57,7 +57,7 @@
           </li>
           
         
-        </ul><script src="firsttask1.js"></script>
+        </ul>
       </div>
     </div>
   </nav>
@@ -71,26 +71,33 @@
       
 
       <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" oninput="validateName(this.value)" required><br><br>
-  
+  <input type="text" id="name" name="name" required><br>
+  <span id="nameError" style="color: red;"></span><br>
+
   <label for="surname">Surname:</label><br>
-  <input type="text" id="surname" name="surname" oninput="validateName(this.value)" required><br><br>
-  
+  <input type="text" id="surname" name="surname" required><br>
+  <span id="surnameError" style="color: red;"></span><br>
+
   <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-  
+  <input type="email" id="email" name="email" required><br>
+  <span id="emailError" style="color: red;"></span><br>
+
   <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" onblur="checkpswd(this.value)" required><br><br>
+  <input type="password" id="password" name="password" required><br>
+  <span id="passwordError" style="color: red;"></span><br>
+
+
   <button type="button" id="swap-btn" onclick="swapForm()">Sign In</button>
-  <input type="submit" id="submitup" value="Submit">
+  <input type="submit" id="submitup" value="Submit" onclick="validateForm()">
   
     </form>
     <form id="signin" style="display: none;">
       <label for="email">Email:</label><br>
       <input type="email" id="emailin" name="email" required><br><br>
-      
+
       <label for="password">Password:</label><br>
-      <input type="password" id="passwordin" name="password" onblur="checkpswd(this.value)" required><br><br>
+      <input type="password" id="passwordin" name="password" required><br>
+      <span id="passwordError" style="color: red;"></span><br>
       
       <input type="submit" id="signinf" value="Submit">
       <button type="button" id="swap-btn" onclick="swapForm()">Sign Up</button>

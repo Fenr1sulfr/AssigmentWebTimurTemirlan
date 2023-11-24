@@ -48,23 +48,28 @@
     <div class="container mt-3" style="background-color: #F5F5F5">
         <div class="row">
             <div class="col-4 col-xs-12" style="margin-top: 70px;">
-        <div class="input-group margin-bottom-sm ">
-            <span class="input-group-addon"><i style="margin-top:5px;margin-right:5px" class="fa fa-credit-card" aria-hidden="true"></i></span>
-            <input style="margin-bottom:3px" id="persName"class="form-control" type="text" placeholder="Name" oninput="validateName(this.value)">
-          </div>
-          <div class="input-group">
-            <span class="input-group-addon"><i style="margin-top:5px;margin-right:5px" class="fa fa-credit-card" aria-hidden="true"></i></span>
-            <input style="margin-bottom:3px" id='onlynumbers'class="form-control" type="password" placeholder="UIN"oninput='validateUIN()'>
-          </div>
-          <div class="col-md  -3 col-xs-12">
-            <div class="input-group margin-bottom-sm">
-                <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i>
-                </span>
-                <input style="margin-left: 4px;" id='cvv' class="form-control" type="text" oninput="checkcvv()" placeholder="CVV">
-              </div> 
-        </div>
-        <div class="col-md col-xs-12">
-          <a class="btn btn-lg" onclick="submitForm()">
+              <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon"><i style="margin-top:5px;margin-right:5px" class="fa fa-credit-card" aria-hidden="true"></i></span>
+                <input style="margin-bottom:3px" id="name" class="form-control" type="text" placeholder="Name">
+                
+            </div>
+            <span id="nameError" style="color: red;"></span>
+            <div class="input-group">
+                <span class="input-group-addon"><i style="margin-top:5px;margin-right:5px" class="fa fa-credit-card" aria-hidden="true"></i></span>
+                <input style="margin-bottom:3px" id='uin' class="form-control" type="password" placeholder="UIN">
+                
+            </div>
+            <span id="uinError" style="color: red;"></span>
+            <div class="col-md-3 col-xs-12">
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                    <input style="margin-left: 4px;" id='cvv' class="form-control" type="text" placeholder="CVV">
+                    
+                </div>
+            </div>  <span id="cvvError" style="color: red;"></span>
+            
+        <div class="col-md col-xs-12" onclick="validatePay()">
+          <a class="btn btn-lg" >
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             Buy
         </a>
