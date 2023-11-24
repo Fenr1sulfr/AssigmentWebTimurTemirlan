@@ -27,9 +27,6 @@ function displayBasket() {
         const textDiv = document.createElement('div');
         textDiv.innerHTML = item;
         itemDiv.appendChild(textDiv);
-        
-
-       
 
         basketDiv.appendChild(itemDiv);
         const deleteButton = document.createElement('button');
@@ -41,12 +38,26 @@ function displayBasket() {
         itemDiv.appendChild(deleteButton);
     });
 
+    const buyButton = document.createElement('button');
+    buyButton.innerHTML = 'Buy';
+    buyButton.classList.add('btn', 'btn-success', 'mt-3', 'mr-2');
+    buyButton.addEventListener('click', () => {
+        var containerData = basket
+        var serializedData = JSON.stringify(containerData);
+        localStorage.setItem('containerData', serializedData);
+        window.location.href = 'pay.html?';
+        console.log('Buy button clicked!');
+    });
+    basketDiv.appendChild(buyButton);
+
     const clearButton = document.createElement('button');
     clearButton.innerHTML = 'Clear Basket';
     clearButton.classList.add('btn', 'btn-secondary', 'mt-3');
     clearButton.addEventListener('click', () => {
         basket.length = 0;
         displayBasket();
+
+
     });
     basketDiv.appendChild(clearButton);
 }

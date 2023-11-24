@@ -32,14 +32,15 @@ document.getElementById('signinf').addEventListener('click', function(event) {
       let key = localStorage.key(i);
       let value = localStorage.getItem(key);
       let obj = JSON.parse(value);
-      if (obj.password === password) {
+      if (obj.password === password && obj.email===email) {
         var data = { email: email, name:obj.name,surname:obj.surname}; // Define the data object if it's not already defined
         var url = 'cab.html?' + new URLSearchParams(data);
         window.location.href = url;
       }
-      else{ 
-        document.getElementById('emailError').textContent = 'Invalid email or password';
-      }
+      
     }
-  }
+  }{ 
+   
+    document.getElementById('loginError').textContent = 'Invalid email or password';
+      }
 });

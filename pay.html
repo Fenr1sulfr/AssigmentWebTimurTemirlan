@@ -76,8 +76,8 @@
         </div>
             </div>
     
-              <div class="col-md-4 col-xs-6">
-                <img src="g1qwjv1cq1hah1ioci2307r3989ivkyo.jpeg" alt="" style="height:100%; width:100%;">
+              <div class="col-md-4 col-xs-6" id="yourInfoContainer">
+                
               </div>
               <div class="col">
                 <span id="text">Описание</span>
@@ -98,6 +98,27 @@
     video.style.height = '100%';
     video.style.objectFit = 'cover';
     video.style.zIndex = '-1';
+</script>
+<script>
+  function displayInfo() {
+    var storedData = localStorage.getItem('containerData');
+    if (storedData) {
+        var retrievedData = JSON.parse(storedData);
+
+        var infoContainer = document.getElementById('yourInfoContainer');
+
+        retrievedData.forEach(function(item) {
+            var itemDiv = document.createElement('div');
+            itemDiv.innerHTML = item;
+            infoContainer.appendChild(itemDiv);
+        });
+    } else {
+        console.log('No data in localStorage');
+    }
+}
+
+// Call the function immediately after the script loads
+displayInfo();
 </script>
     <script src="confirm.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

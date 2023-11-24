@@ -1,40 +1,26 @@
-const submit = document;
-const storage = localStorage;
+function getInfoBasketForPay() {
+   // Получение данных из localStorage
+var storedData = localStorage.getItem('containerData');
 
-submit.getElementById('submitup').addEventListener('click', function(event) {
-    event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+// Если данные существуют, преобразуйте их обратно из JSON и отобразите в div
+if (storedData) {
+    var retrievedData = JSON.parse(storedData);
 
-    const id = 'user' + Date.now();
+    // Создайте новый элемент div для отображения данных
+    var displayDiv = document.createElement('div');
+    displayDiv.classList.add('display-container'); // добавьте класс, если нужно стилизовать контейнер
 
-    var data = {
-        name: submit.getElementById('name').value,
-        surname: submit.getElementById('surname').value,
-        password: submit.getElementById('password').value,
-        email: submit.getElementById('email').value,
-    };
+    // Переберите данные и добавьте их в элемент div
+    retrievedData.forEach(function(item) {
+        var itemDiv = document.createElement('div');
+        itemDiv.textContent = item;
+        displayDiv.appendChild(itemDiv);
+    });
 
-    if (!check(data.email)) {
-        return alert("This account already exists");
-    }
-
-    var jsonData = JSON.stringify(data);
-    storage.setItem(id, jsonData);
-
-    // Создаем URL с параметрами запроса на основе данных формы
-    var url = 'cab.html?' + new URLSearchParams(data);
-
-    // Перенаправляем пользователя на страницу cab.html с параметрами запроса
-    window.location.href = url;
-});
-
-function check(mail) {
-    for (let key in storage) {
-        if (!storage.hasOwnProperty(key)) continue; // To avoid iterating over non-own properties
-        var item = JSON.parse(storage.getItem(key));
-        if (mail === item.email) {
-            return false;
-        }
-    }
-    return true;
+    // Добавьте созданный элемент div на страницу
+    document.body.appendChild(displayDiv);
+} else {
+    console.log('Нет данных в localStorage');
 }
 
+}
