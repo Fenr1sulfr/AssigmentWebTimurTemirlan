@@ -8,7 +8,7 @@ for (let i = 0; i < localStorage.length; i++) {
       <h1>${key}</h1>
       <p><code>${obj.name} ${obj.surname}</code></p>
       <p>email:${obj.email} and password:${obj.password}</p>
-      <button class="delete-btn" onclick="deleteContainer()">Delete Content</button>
+      <button class="delete-btn" onclick="deleteContainer(this.parentNode)">Delete Content</button>
       <button class="add-btn" onclick="addUser()">Add User</button>
       <button class="edit-btn" onclick="editContainer()">Edit</button>
 
@@ -16,10 +16,19 @@ for (let i = 0; i < localStorage.length; i++) {
   `);
 
 } 
-function deleteContainer() {
-    var element = document.querySelector('.container');
-    element.parentNode.removeChild(element);
-    localStorage.removeItem(element.querySelector('h1').textContent)
+function deleteContainer(container) {
+    // Check if container is provided
+    if (container) {
+        var key = container.querySelector('h1').textContent;
+
+        // Remove the container from the DOM
+        container.parentNode.removeChild(container);
+
+        // Remove the corresponding item from localStorage
+        localStorage.removeItem(key);
+    } else {
+        console.log('Container not found.');
+    }
 }
 
 function editContainer() {
