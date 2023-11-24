@@ -16,7 +16,7 @@ function displayBasket() {
 
     basketDiv.innerHTML = ''; // Clear the previous content
     const labelDiv = document.createElement('div');
-    labelDiv.innerHTML = 'Basket:';
+    labelDiv.innerHTML = '<h3><i class="fa fa-shopping-cart" aria-hidden="true"></i>'+'Basket:</h3>';
     basketDiv.appendChild(labelDiv);
 
     basket.forEach((item, index) => {
