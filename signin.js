@@ -38,7 +38,7 @@ document.getElementById('signinf').addEventListener('click', function(event) {
         window.location.href = url;
       }
       else{ 
-        document.getElementById('emailError').textContent = 'Invalid email format';
+        document.getElementById('emailError').textContent = 'Invalid email or password';
       }
     }
   }
